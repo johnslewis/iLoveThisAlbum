@@ -1,0 +1,40 @@
+<html>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>I love this album more than I love myself.</title>
+<h1>I love this album more than I love myself.</h1>
+
+<img src="/static/instructions.png"  class="logo">
+
+<form action="/get_image" method="get" id="myForm" class = "form">
+  <label for="artist">Artist name:</label><br>
+  <input type="text" id="artist" name="artist"><br>
+  <label for="artist">Album name:</label><br>
+  <input type="text" id="album" name="album"><br>
+  <button type="submit">Get image</button>
+</form>
+<br>
+<br>
+<br>
+<a href="https://twitter.com/john_lewi"
+<p>Twitter</p>
+</a>
+<a href="https://github.com/johnslewis"
+<p>Github</p>
+</a>
+<br>
+<br>
+<br>
+<p>(this is my first website, leave me alone !)</p>
+</html>
+<script>
+  const myForm = document.getElementById("myForm")
+
+
+  myForm.addEventListener("submit", (e) =>{
+    e.preventDefault();
+    window.location.href = "/get_image?artist=" + myForm.artist.value + "&album=" + myForm.album.value;
+    // console.log(myForm.artist.value);
+  });
+</script>
+
